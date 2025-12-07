@@ -8,7 +8,7 @@ const Doctors = () => {
     const [doctors, setDoctors] = useState([]);
     const [newDoctor, setNewDoctor] = useState({
         name: '',
-        specialty: ''
+        specialization: ''
     });
     const [selectedDoctor, setSelectedDoctor] = useState(null);
     const [isEditMode, setIsEditMode] = useState(false);
@@ -26,7 +26,7 @@ const Doctors = () => {
             .post('http://localhost:5000/doctors/add', newDoctor)
             .then(response => {
                 setDoctors([...doctors, response.data]);
-                setNewDoctor({ name: '', specialty: '' });
+                setNewDoctor({ name: '', specialization: '' });
             })
             .catch(error => console.error('Error adding doctor:', error));
     };
@@ -97,16 +97,16 @@ const Doctors = () => {
                     <label>Specialty: </label>
                     <input
                         type="text"
-                        value={isEditMode ? selectedDoctor.specialty : newDoctor.specialty}
+                        value={isEditMode ? selectedDoctor.specialization : newDoctor.specialization}
                         onChange={(e) =>
                             isEditMode
                                 ? setSelectedDoctor({
                                     ...selectedDoctor,
-                                    specialty: e.target.value
+                                    specialization: e.target.value
                                 })
                                 : setNewDoctor({
                                     ...newDoctor,
-                                    specialty: e.target.value
+                                    specialization: e.target.value
                                 })
                         }
                     />

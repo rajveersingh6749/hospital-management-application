@@ -39,7 +39,7 @@ router.route('/update/:id').post((req, res) => {
 // Delete patient
 router.route('/delete/:id').delete((req, res) => {
     Patient.findByIdAndDelete(req.params.id)
-        .then(() => {
+        .then((patient) => {
             if(!patient) {
                 return res.status(404).json('Error: Patient not found');
             }
