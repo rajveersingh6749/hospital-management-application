@@ -1,0 +1,108 @@
+/* /src/components/Doctors.css */
+
+.main-doc-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Doctors list section */
+.doctors-section {
+    width: 45%;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Doctor card styling */
+.doctor-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-card:hover {
+    transform: scale(1.02);
+}
+
+.doctor-card p {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+}
+
+.doctor-card button {
+    margin-top: 8px;
+}
+
+/* Form section */
+.form-sections {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-sections h4 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.form-sections form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-sections label {
+    margin-bottom: 8px;
+}
+
+.form-sections input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-sections button {
+    align-self: flex-start;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-sections button:hover {
+    background-color: #0056b3;
+}
+
+/* General button styling */
+button {
+    margin-top: 8px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Edit / Delete button container */
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
